@@ -52,8 +52,8 @@ verbose_mode = Choice.choices[:verbose]
 # Create a Chef::Config object from the supplied knife.rb
 Chef::Config.from_file(Choice.choices[:int_conf])
 
-# Create a REST object for interacting with the Chef Server API
-int_rest = Chef::REST.new(Chef::Config[:chef_server_url])
+# Create a ServerAPI object for interacting with the Chef Server API
+int_rest = Chef::ServerAPI.new(Chef::Config[:chef_server_url])
 
 puts "************************************"
 puts "*         Cookbook Cleaner         *"
